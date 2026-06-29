@@ -9,6 +9,6 @@ public:
   RollResult Roll(const RollRequest &request);
 
 private:
-  Vector3 GenerateForce() const;
-  Vector3 GenerateTorque() const;
+  Vector3 GenerateForce(float intensity) const;
+  Vector3 GenerateTorque(float intensity) const;
 };

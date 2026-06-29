@@ -9,6 +9,7 @@ add_executable(
     RollForge
     src/main.cpp
     src/DiceEngine.cpp
+    src/Random.cpp
 )
 
 target_include_directories(RollForge PRIVATE include)
