@@ -10,4 +10,6 @@ struct RollRequest
   unsigned int serverSeed;
 
   int diceCount;
+
+  float intensity;
 };

@@ -2,14 +2,19 @@
 
 #include "Vector3.h"
 
-struct RollResult
+struct DiceResult
 {
     int value;
 
     Vector3 force;
     Vector3 torque;
-
     Vector3 finalRotation;
+};
+
+struct RollResult
+{
+    DiceResult *dice;
+    int diceCount;
 
     unsigned int replaySeed;
 };
