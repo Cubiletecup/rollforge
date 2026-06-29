@@ -8,6 +8,8 @@ struct DiceResult
 
     Vector3 force;
     Vector3 torque;
+    Vector3 velocity;
+    Vector3 angularVelocity;
     Vector3 finalRotation;
 };
 

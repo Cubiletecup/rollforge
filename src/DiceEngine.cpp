@@ -15,8 +15,21 @@ RollResult DiceEngine::Roll(const RollRequest &request)
 
     result.dice[i].value = Random::Range(1, 6);
 
-    result.dice[i].force = GenerateForce(request.intensity) * variation;
-    result.dice[i].torque = GenerateTorque(request.intensity) * variation;
+    Vector3 force = GenerateForce(request.intensity) * variation;
+    Vector3 torque = GenerateTorque(request.intensity) * variation;
+
+    result.dice[i].force = force;
+    result.dice[i].torque = torque;
+
+    result.dice[i].velocity = {
+        force.x * 0.15f,
+        force.y * 0.15f,
+        force.z * 0.15f};
+
+    result.dice[i].angularVelocity = {
+        torque.x * 0.25f,
+        torque.y * 0.25f,
+        torque.z * 0.25f};
 
     result.dice[i].finalRotation = {
         Random::Range(0.f, 360.f),

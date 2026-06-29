@@ -30,10 +30,28 @@ int main()
   {
     std::cout << "Dice [" << i << "]"
               << " → value: " << result.dice[i].value
-              << " | force: (" << result.dice[i].force.x << ", "
+
+              << "\n   force: ("
+              << result.dice[i].force.x << ", "
               << result.dice[i].force.y << ", "
               << result.dice[i].force.z << ")"
-              << "\n";
+
+              << "\n   velocity: ("
+              << result.dice[i].velocity.x << ", "
+              << result.dice[i].velocity.y << ", "
+              << result.dice[i].velocity.z << ")"
+
+              << "\n   torque: ("
+              << result.dice[i].torque.x << ", "
+              << result.dice[i].torque.y << ", "
+              << result.dice[i].torque.z << ")"
+
+              << "\n   angular velocity: ("
+              << result.dice[i].angularVelocity.x << ", "
+              << result.dice[i].angularVelocity.y << ", "
+              << result.dice[i].angularVelocity.z << ")"
+
+              << "\n\n";
   }
 
   std::cout << "\n----- METADATA -----\n";
